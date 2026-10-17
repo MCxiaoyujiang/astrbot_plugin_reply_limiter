@@ -4,7 +4,7 @@ short_desc: 限制机器人回复的字符长度，超长自动截断或拦截�
 desc: 在消息发出前统计回复文本长度，超过设定上限时自动截断（可配置后缀）或整条拦截。支持 WebUI 可视化配置，并提供 /replylimit 管理员指令在运行时开关与调整。
 author: YourName
 version: 1.0.0
-repo: https://github.com/yourname/astrbot_plugin_reply_limiter
+repo: https://github.com/MCxiaoyujiang/astrbot_plugin_reply_limiter
 support_platforms:
   - aiocqhttp
   - qq_official
