@@ -1,0 +1,47 @@
+{
+  "enabled": {
+    "description": "启用回复长度限制",
+    "hint": "关闭后插件不做任何处理，回复原样发出。",
+    "type": "bool",
+    "default": true
+  },
+  "max_length": {
+    "description": "单条回复的最大字符数",
+    "hint": "仅统计文本内容，图片、语音、@等非文本消息段不计入长度。超过该值即触发处理。",
+    "type": "int",
+    "default": 300,
+    "slider": {
+      "min": 10,
+      "max": 5000,
+      "step": 10
+    }
+  },
+  "mode": {
+    "description": "超长处理方式",
+    "hint": "truncate：截断保留前面的内容；block：整条丢弃，只回一句提示语。",
+    "type": "string",
+    "default": "truncate",
+    "options": [
+      "truncate",
+      "block"
+    ]
+  },
+  "suffix": {
+    "description": "截断后追加的后缀",
+    "hint": "仅在 truncate 模式下生效，会占用 max_length 的额度。留空则直接截断。",
+    "type": "string",
+    "default": "…"
+  },
+  "block_notice": {
+    "description": "拦截模式下的提示语",
+    "hint": "仅在 block 模式下生效。留空则使用默认提示。",
+    "type": "text",
+    "default": "这条回复太长了，已被拦截。"
+  },
+  "show_stats": {
+    "description": "提示语后附带字符统计",
+    "hint": "开启后拦截提示会显示形如（原 520 字，上限 300 字）的说明。",
+    "type": "bool",
+    "default": true
+  }
+}
